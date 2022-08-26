@@ -1,13 +1,123 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'DM Sans';
+  src: local('DM Sans'), url(./fonts/DM_Sans/DMSans-Regular.ttf) format('tff');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 40px auto;
+  max-width: 986px;
+  /* line-height: 1.6; */
+  font-size: 16px;
+  color: #333;
+  padding: 0 10px;
+  font-family: 'DM Sans'
+}
+
+p {
+  margin: 0;
+}
+
+.search-bar {
+  width: 944px;
+  padding: 20px;
+  border: 1px solid #CCC;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+::placeholder {
+  font-family: 'DM Sans';
+  font-size: 16px;
+  color: #AAA;
+}
+
+table, th, td {
+  border: 1px solid #CCC;
+  border-collapse: collapse;
+}
+
+table {
+  width: 986px;
+  margin-bottom: 20px;
+}
+
+th {
+  padding: 10px 0;
+  background: #F9F6F9;
+  color: #555;
+  font-weight: 500;
+}
+
+td {
+  position: relative;
+  padding: 5px;
+  padding-top: 20px;
+  width: 110px;
+  height: 80px;
+}
+
+input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+}
+
+input[type=checkbox] {
+  margin-left: -1px;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+.p-day {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: #AAA;
+}
+
+.groups {
+  display: flex;
+  gap: 10px;
+}
+
+.group {
+  border-radius: 5px;
+  padding: 5px;
+  color: #FFF;
+}
+
+.event {
+  display: flex;
+  align-items: flex-start;
+  text-align: right;
+  border-radius: 5px;
+  padding: 5px;
+  color: #FFF;
+}
+
+.event + .event {
+  margin-top: 5px;
+}
+
+.modal-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.3;
+}
+
+.modal {
+  position: absolute;
+  width: 300px;
+  height: 25vw;
+  top: 25vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 5px;
+  opacity: 1;
 }
